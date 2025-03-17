@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechShop - Sua Loja de Tecnologia</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="img-header">
+                <img src="img/logo.png" alt="Logotipo da TechShop">
+            </div>
+            <nav>
+                <li><a href="#footer">Contato</a></li>
+                <li><a href="#"><button onclick="openModal()">Acesse</button></a></li>
+            </nav>
+        </div>
+    </header>
+    <div class="box-inicial">
+        <div class="content">
+            <h1>Encontre os melhores dispositivos tecnológicos!</h1>
+            <button onclick="openModal()">Cadastro</button>
+        </div>
+    </div>
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <button class="close-btn" onclick="closeModal()">&times;</button>
+            <h2>Cadastro - TechShop</h2>
+            <form method="post" action="processa.php" id="formm">
+                <label for="nome">Nome Completo</label>
+                <input type="text" id="nome" name="nome" maxlength="100" pattern="[A-Za-zÀ-ÿ ]{3,}" required placeholder="Digite seu nome completo">
+                
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" maxlength="40" required placeholder="Digite seu e-mail">
+                
+                <label for="senha">Senha</label>
+                <input type="password" id="senha" name="senha" minlength="8" pattern="(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}" required placeholder="Crie uma senha segura">
+                
+                <label for="cpf">CPF</label>
+                <input type="text" id="cpf" name="cpf" maxlength="14" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" required placeholder="000.000.000-00" title="Formato correto: 000.000.000-00">
+                
+                <label for="informacoes">Você gostaria de receber promoções?</label>
+                <select name="info" id="info">
+                    <option value="sim">Sim, gostaria de receber promoções.</option>
+                    <option value="nao">Não, não quero receber promoções.</option>
+                </select>
+
+                <div class="checkbox-container">
+                    <input type="checkbox" id="termos" name="termos" required>
+                    <label for="termos">Aceito os termos e condições</label>
+                </div>
+                <button type="submit" id="enviar">Cadastrar</button>
+            </form>
+        </div>
+    </div>
+    <section id="first-sec">
+        <div class="container">
+            <div class="product">
+                <img src="img/smr.jpg" alt="Smartphone">
+                <h2>Smartphone X Pro</h2>
+                <p>O melhor smartphone para quem busca desempenho e inovação.</p>
+                <p><strong>Preço:</strong> R$ 3.500,00</p>
+            </div>
+            <div class="product">
+                <img src="img/fone.jpg" alt="Fone de Ouvido">
+                <h2>Fone Bluetooth</h2>
+                <p>Som de alta qualidade e conforto para o seu dia a dia.</p>
+                <p><strong>Preço:</strong> R$ 699,00</p>
+            </div>
+            <div class="product">
+                <img src="img/note.jpg" alt="Notebook Gamer">
+                <h2>Notebook Gamer Elite</h2>
+                <p>Desempenho e gráficos poderosos para jogos e trabalho.</p>
+                <p><strong>Preço:</strong> R$ 5.500,00</p>
+            </div>
+            <div class="product">
+                <img src="img/Smart.jpg" alt="Smartwatch">
+                <h2>Smartwatch X</h2>
+                <p>Seu assistente pessoal para monitorar a saúde e atividades.</p>
+                <p><strong>Preço:</strong> R$ 1.200,00</p>
+            </div>
+            <div class="product">
+                <img src="img/cam.jpg" alt="Câmera Digital">
+                <h2>Câmera Digital 4K</h2>
+                <p>Capture momentos inesquecíveis com qualidade 4K.</p>
+                <p><strong>Preço:</strong> R$ 2.800,00</p>
+            </div>
+            <div class="product">
+                <img src="img/carreg.jpg" alt="Carregador Portátil">
+                <h2>Carregador Portátil</h2>
+                <p>Mantenha seus dispositivos carregados o tempo todo.</p>
+                <p><strong>Preço:</strong> R$ 150,00</p>
+            </div>
+        </div>
+    </section>
+    <footer id="footer">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="img/logo2.png" alt="Logo da TechShop">
+            </div>
+            <div class="footer-links">
+                <ul>
+                    <li><a href="https://politicaprivacidade.com/#:~:text=O%20que%20é%20uma%20Política,e%20fazem%20uso%20desses%20dados." target="_blank">- Política de Privacidade</a></li>
+                    <li><a href="https://politicaprivacidade.com/#:~:text=O%20que%20é%20uma%20Política,e%20fazem%20uso%20desses%20dados." target="_blank">- Termos de Uso</a></li>
+                    <li><a href="https://politicaprivacidade.com/#:~:text=O%20que%20é%20uma%20Política,e%20fazem%20uso%20desses%20dados." target="_blank">- Suporte</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <a href="https://www.facebook.com/?locale=pt_BR" target="_blank" class="social-icon"><i class="fab fa-facebook"></i></a>
+                <a href="https://x.com/?lang=pt" target="_blank" class="social-icon"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.instagram.com" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+        <p>&copy; 2025 TechShop - Todos os direitos reservados</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
